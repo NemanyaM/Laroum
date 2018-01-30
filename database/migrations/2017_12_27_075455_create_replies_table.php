@@ -19,6 +19,9 @@ class CreateRepliesTable extends Migration
             $table->integer('thread_id');
             $table->text('body');
             $table->timestamps();
+
+//adding constraint on migration level
+//            $table->foreign('thread_id')->onDelete('cascade');
         });
     }
 
